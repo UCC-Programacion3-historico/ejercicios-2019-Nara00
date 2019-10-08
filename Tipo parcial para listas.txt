@@ -1,0 +1,10 @@
+Crear un metodo nuevo en la lista enlazada que se llame mover al ultimo 
+(moverulti(int pos)) y le paso un entero a posición.
+Variantes: un nodo a la posición x la muevo a la posición n.
+un nodo a la posición x lo muevo al inicio.
+Intercambiar los nodos.
+poner tal dato en tal posición.
+.
+.
+.
+Hacerlo con enlaces.

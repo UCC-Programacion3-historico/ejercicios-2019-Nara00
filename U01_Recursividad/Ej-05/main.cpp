@@ -1,7 +1,12 @@
 #include <iostream>
 #include "digitos.h"
+using namespace std;
 
 int main() {
-    std::cout << "Ejercicio 01/05\n" << std::endl;
+    cout << "Ejercicio 01/05\n" << std::endl;
+    int num;
+    cout<<"Ingrese numero: ";
+    cin>>num;
+    escribir_espaciado(num);
     return 0;
 }
