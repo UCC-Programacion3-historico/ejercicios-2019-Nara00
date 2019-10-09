@@ -5,8 +5,19 @@
 
 
 template<class T>
-Lista<T> *unir(Lista<T> &lisA, Lista<T> &lisB) {
-    return new Lista<T>();
+Lista<T> *unir(Lista<T> &lisA, Lista<T> &lisB)
+{
+    Nodo<T> *auxA, *auxB;
+    auxA= lisA.getInicio();
+    auxB= lisB.getInicio();
+    while(auxA->getSiguiente()!= nullptr)
+    {
+        auxA=auxA->getSiguiente();
+    }
+    auxA->setSiguiente(auxB);
+    Lista<T> l(lisA);
+    Lista<T> *listar=l;
+    return &l;
 }
 
 

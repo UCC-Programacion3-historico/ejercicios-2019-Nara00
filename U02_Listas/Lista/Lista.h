@@ -45,7 +45,7 @@ public:
 
     void mostrarElemOrden()
     {
-        for (int i=0; i< this->getTamanio(); i++)
+        for (int i=0; i<this->getTamanio(); i++)
         {
             cout<<"\nElemento "<<i<<": "<<this->getDato(i);
         }
@@ -58,6 +58,13 @@ public:
     void setInicio(Nodo<T>* newInicio)
     {
         inicio=newInicio;
+    }
+
+    void insertarMedio(T dato)
+    {
+        int medio;
+        medio= this->getTamanio()/2;
+        this->insertar(medio, dato);
     }
 };
 
@@ -78,7 +85,17 @@ Lista<T>::Lista() {
  * @param li
  */
 template<class T>
-Lista<T>::Lista(const Lista<T> &li) {}
+Lista<T>::Lista(const Lista<T> &li)
+{
+    inicio = nullptr;
+    Nodo<T> *aux;
+    aux=li.inicio;
+    do
+    {
+        this->insertarUltimo(aux->getDato());
+        aux= aux->getSiguiente();
+    }while (aux != nullptr);
+}
 
 
 /**

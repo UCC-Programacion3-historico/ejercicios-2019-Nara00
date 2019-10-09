@@ -14,32 +14,33 @@ void fnInvierte (Lista<T> *lis)
     int tamanio=lis->getTamanio();
     inicio= lis->getInicio();
     aux1=inicio;
-    for (int i=0; i<tamanio; i++)
+    for (int i=1; i<=tamanio; i++)
     {
-        if(i==0) {
-            while (aux1->getSiguiente()->getSiguiente()->getSiguiente() != NULL) {
+        if(i==1) {
+            while (aux1->getSiguiente()->getSiguiente() != NULL) {
                 aux1 = aux1->getSiguiente();
             }
-            fin = aux1->getSiguiente()->getSiguiente();
-            aux1->getSiguiente()->getSiguiente() = aux1;
+            fin = aux1->getSiguiente();
+            aux1->getSiguiente()->setSiguiente(aux1);
         }
         else
         {
             if(i==tamanio)
             {
-                aux1->getSiguiente() = NULL;
+                aux1->setSiguiente(NULL);
             }
             else
             {
-                while (aux1->getSiguiente()->getSiguiente()->getSiguiente() != aux1->getSiguiente()) {
+                while (aux1->getSiguiente()->getSiguiente()->getSiguiente() != aux1->getSiguiente())
                     aux1 = aux1->getSiguiente();
-                    aux1->getSiguiente()->getSiguiente() = aux1;
-                }
+                aux1->getSiguiente()->setSiguiente(aux1);
+
             }
         }
         aux1=inicio;
     }
     lis->setInicio(fin);
+
 }
 
 
