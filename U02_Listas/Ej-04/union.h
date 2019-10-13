@@ -15,9 +15,9 @@ Lista<T> *unir(Lista<T> &lisA, Lista<T> &lisB)
         auxA=auxA->getSiguiente();
     }
     auxA->setSiguiente(auxB);
-    Lista<T> l(lisA);
-    Lista<T> *listar=l;
-    return &l;
+    //Lista<T> l(lisA);
+    //Lista<T> l = new Lista<T>(lisA);
+    return new Lista<T>(lisA);
 }
 
 
