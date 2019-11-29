@@ -68,7 +68,7 @@ add_executable(run_test
         U09_Busqueda/Ej04.cpp
         U09_Busqueda/Ej05.cpp
 
-        )
+        ../TipoParcial/RepasoParcial1.cpp ../TipoParcial/main2.cpp)
 
 # Habilito Coverage
 SET(COVERAGE OFF CACHE BOOL "Coverage")
